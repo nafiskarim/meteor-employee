@@ -9,6 +9,7 @@ Meteor.startup(() => {
 
   // check if there is any data exists to aavoid loading huge data again
   const numberRecords = Employees.find({}).count()
+  console.log(numberRecords);
 
   if(!numberRecords) {
     // then generate some data
@@ -24,5 +25,4 @@ Meteor.startup(() => {
       })
     })
   }
-
 });
