@@ -26,7 +26,7 @@ Meteor.startup(() => {
     })
   }
 
-  Meteor.publish('employees', function () {
-    return Employees.find({}, { limit: 20}) // it's kind of bookmark, saying if you want me to I can go to find all the records that exist.
+  Meteor.publish('employees', function (per_page) {
+    return Employees.find({}, { limit: per_page}) // it's kind of bookmark, saying if you want me to I can go to find all the records that exist.
   })
 });
