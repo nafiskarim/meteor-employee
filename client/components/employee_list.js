@@ -9,8 +9,7 @@ const EmployeeList = (props) => {
     <div>
       <div className="employee-list">
         { props.employees.map( employee => {
-          console.log(employee);
-            return <EmployeeDetail employee={employee} />
+            return <EmployeeDetail key={employee._id} employee={employee} />
           })
         }
       </div>
