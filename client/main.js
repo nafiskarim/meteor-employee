@@ -15,3 +15,4 @@ Meteor.startup(() => {
   // React render call
   ReactDOM.render(<App />, document.querySelector('.container'));
 });
+  
