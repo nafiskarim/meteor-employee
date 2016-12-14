@@ -1,13 +1,14 @@
 import React from 'react'
 import { createContainer } from 'meteor/react-meteor-data'
 import { Employees } from '../../imports/collections/employees'
+import EmployeeDetail from './employee_detail'
 
 const EmployeeList = (props) => {
-  // props.employee is available here
+  // props.employee => an array of employee objects
   return (
     <div>
       <div className="employee-list">
-        employee-list component
+        { props.employees.map( (employee) => <EmployeeDetail /> ) }
       </div>
     </div>
   )
